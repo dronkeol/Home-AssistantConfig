@@ -6,3 +6,4 @@ known_devices.yaml
 *.db
 *.log
 core
+home-assistant_v2.db*

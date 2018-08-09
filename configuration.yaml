@@ -43,7 +43,6 @@ switch: !include switches.yaml
 binary_sensor: !include binary_sensors.yaml
 alarm_control_panel: !include mqtt-alarm.yaml
 light: !include lights.yaml
-panel_custom: !include panel_custom.yaml
 notify: !include notification.yaml
 sensor: !include sensors.yaml
 shell_command: !include shell_commands.yaml
