@@ -51,3 +51,10 @@ zone.colegio_los_alpes:
   radius: 55
 zone.nic_chile:
   radius: 50
+input_number.lampara_comedor:
+  icon: mdi:brightness-6
+input_number.lampara_porche:
+  icon: mdi:brightness-6
+group.movimiento:
+  icon: mdi:motion
+

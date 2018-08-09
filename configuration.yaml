@@ -48,6 +48,7 @@ sensor: !include sensors.yaml
 shell_command: !include shell_commands.yaml
 device_tracker: !include device_tracker.yaml
 zone: !include zones.yaml
+input_number: !include input_numbers.yaml
 #########camera: !include camera.yaml
 
 logger:

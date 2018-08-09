@@ -18,6 +18,7 @@
       - group.exterior
       - group.alarma
       - group.estado_del_servidor
+      - group.lampara_comedor
 
 ####################################################
 #                     ROOMS                        #
@@ -26,6 +27,7 @@
     control: hidden
     entities:
       - group.personas
+      - group.movimiento
       - alarm_control_panel.alarma
       - script.alarm_arm_away
       - script.alarm_arm_home
@@ -39,8 +41,9 @@
     control: hidden
     entities:
       - light.lampara_comedor
+      - input_number.lampara_comedor
       - binary_sensor.pir_comedor
-      - camera.camara_comedor
+        #      - camera.camara_comedor
 
   Sala Estar:
     control: hidden
@@ -74,7 +77,9 @@
   Exterior:
     control: hidden
     entities:
-      - light.porche
+      - group.lampara_porche
+      - light.lampara_porche
+      - input_number.lampara_porche
       - sensor.dark_sky_temperature
       - sensor.dark_sky_humidity
 
@@ -92,9 +97,13 @@
     - sensor.load_5m
     - sensor.load_15m
 
-  Yeelights:
+  lampara_comedor:
     - light.lampara_comedor
-    - light.porche
+    - input_number.lampara_comedor
+ 
+  lampara_porche:
+    - light.lampara_porche
+    - input_number.lampara_porche
 
   Personas:
     view: no
@@ -102,3 +111,11 @@
     entities:
     - device_tracker.cristian_iphone
     - device_tracker.carmen_telefono
+
+  Movimiento:
+    control: hidden
+    name: Movimiento
+    entities:
+    - binary_sensor.pir_comedor
+    - binary_sensor.pir_logia
+    - binary_sensor.pir_escalera
