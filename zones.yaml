@@ -1,0 +1,10 @@
+- name: Colegio los Alpes
+  latitude: -33.5652269
+  longitude: -70.7837735
+  radius: 250
+  icon: mdi:school
+
+- name: Nic Chile
+  latitude: -33.4403247
+  longitude: -70.64578
+  icon: mdi:work

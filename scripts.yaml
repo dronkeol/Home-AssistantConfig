@@ -1,0 +1,12 @@
+alarm_arm_home:
+  alias: Activar en modo casa
+  sequence:
+    - service: alarm_control_panel.alarm_arm_home
+alarm_arm_away:
+  alias: Activar en modo ausente
+  sequence:
+    - service: alarm_control_panel.alarm_arm_away
+alarm_disarm:
+  alias: Desactivar
+  sequence:
+    - service: alarm_control_panel.alarm_disarm

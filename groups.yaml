@@ -1,0 +1,104 @@
+####################################################
+#                                                  #
+#                     VIEWS                        #
+#                                                  #
+####################################################
+
+  Default_view:
+    name: Lugares
+    view: yes
+    icon: mdi:home
+    entities:
+      - group.personas
+      - group.living
+      - group.comedor
+      - group.logia
+      - group.sala_estar
+      - group.segundo_piso
+      - group.exterior
+      - group.alarma
+      - group.estado_del_servidor
+
+####################################################
+#                     ROOMS                        #
+####################################################
+  Alarma:
+    control: hidden
+    entities:
+      - group.personas
+      - alarm_control_panel.alarma
+      - script.alarm_arm_away
+      - script.alarm_arm_home
+      - script.alarm_disarm
+
+  Living:
+    control: hidden
+    #entities:
+
+  Comedor:
+    control: hidden
+    entities:
+      - light.lampara_comedor
+      - binary_sensor.pir_comedor
+      - camera.camara_comedor
+
+  Sala Estar:
+    control: hidden
+    #entities:
+
+  Segundo Piso:
+    control: hidden
+    entities:
+      - binary_sensor.pir_escalera
+      - group.dormitorio_1
+      - group.dormitorio_2
+      - group.dormitorio_3
+    
+  Logia:
+    control: hidden
+    entities:
+      - binary_sensor.pir_logia
+
+  Dormitorio 1:
+    control: hidden
+    #entities:
+
+  Dormitorio 2:
+    control: hidden
+    #entities:
+
+  Dormitorio 3:
+    control: hidden
+    #entities:
+
+  Exterior:
+    control: hidden
+    entities:
+      - light.porche
+      - sensor.dark_sky_temperature
+      - sensor.dark_sky_humidity
+
+  Estado del Servidor:
+    - sensor.processor_use
+    - sensor.disk_use_percent_home
+    - sensor.memory_use_percent
+    - sensor.since_last_boot_templated
+    - sensor.network_in_eth0
+    - sensor.network_out_eth0
+    - sensor.cpu
+    - sensor.cpu_temperature
+    - sensor.lets_encrypt_expiration
+    - sensor.load_1m
+    - sensor.load_5m
+    - sensor.load_15m
+
+  Yeelights:
+    - light.lampara_comedor
+    - light.porche
+
+  Personas:
+    view: no
+    name: Personas
+    entities:
+    - device_tracker.cristian_iphone
+    - device_tracker.carmen_telefono

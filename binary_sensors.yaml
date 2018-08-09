@@ -1,0 +1,14 @@
+- platform: mqtt
+  name: "Pir Comedor"
+  state_topic: "casa/comedor/pir"
+  device_class: motion
+
+- platform: mqtt
+  name: "Pir Logia"
+  state_topic: "casa/logia/pir"
+  device_class: motion
+
+- platform: mqtt
+  name: "Pir Escalera"
+  state_topic: "casa/escalera/pir"
+  device_class: motion

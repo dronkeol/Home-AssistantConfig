@@ -1,0 +1,3 @@
+enciende_sirena: "/config/rpi-rf_send 7815080"
+sirena_bip_arm: "/config/rpi-rf_send 1313332"
+sirena_bip_disarm: "/config/rpi-rf_send 1313330"

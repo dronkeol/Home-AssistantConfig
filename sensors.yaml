@@ -1,0 +1,38 @@
+- platform: darksky
+  api_key: !secret darksky
+  monitored_conditions:
+  - icon
+  - summary
+  - temperature_max
+  - temperature_min
+  - temperature
+  - humidity
+  - precip_probability
+  update_interal: '00:15'
+  language: es
+
+- platform: systemmonitor
+  resources:
+  - type: disk_use_percent
+    arg: /home
+  - type: memory_use_percent
+  - type: processor_use
+  - type: since_last_boot
+  - type: network_in
+    arg: eth0
+  - type: network_out
+    arg: eth0
+  - type: load_1m
+  - type: load_5m
+  - type: load_15m
+
+
+- platform: command_line
+  name: CPU Temperature
+  command: "cat /sys/class/thermal/thermal_zone0/temp"
+  unit_of_measurement: "°C"
+  value_template: '{{ value | multiply(0.001) | round(1) }}'
+
+- platform: cert_expiry
+  host: !secret host
+  name: Lets Encrypt Expiration

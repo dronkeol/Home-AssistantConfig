@@ -1,0 +1,6 @@
+- platform: yi
+  name: Camara Comedor
+  host: !secret camera.yi.comedor.host
+  password: !secret camera.yi.comedor.password
+  ffmpeg_arguments: '-vf scale=800:450'
+  path: /home/hd1/record

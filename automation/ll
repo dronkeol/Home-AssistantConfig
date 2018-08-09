@@ -1,0 +1,69 @@
+- alias: 'Notify - HA Pi Disk Use'
+  trigger:
+    platform: numeric_state
+    entity_id: sensor.disk_use_percent_home
+    above: 65
+  action:
+    service: notify.ios_iphone_de_cristian
+    data:
+      title: "Alerta de Sistema"
+      message: "HomeAssistant El espacio en disco es muy bajo."
+- alias: 'Notify -  HA Pi Disk Use Critical'
+  trigger:
+    platform: numeric_state
+    entity_id: sensor.disk_use_percent_home
+    above: 90
+  action:
+    service: notify.ios_iphone_de_cristian
+    data:
+      title: "Alerta de Sistema"
+      message: "HomeAssistant El espacio en disco es EXTREMADAMENTE bajo."
+- id: alarm_armed_away
+  alias: '[Alarm] Modo ausente'
+  trigger:
+    platform: state
+    entity_id: alarm_control_panel.alarma
+    to: 'armed_away'
+  action:
+  - service: notify.telegram
+    data:
+      message: 'La alarma ha sido activada en modo Ausente, adiós'
+  - service: shell_command.sirena_bip_arm
+
+- id: alarm_armed_home
+  alias: '[Alarm] Modo Presente'
+  trigger:
+    platform: state
+    entity_id: alarm_control_panel.alarma
+    to: 'armed_home'
+  action:
+  - service: notify.telegram
+    data:
+      message: 'La alarma ha sido activada en modo Presente, adiós'
+  - service: shell_command.sirena_bip_arm
+
+- id: alarm_disarmed
+  alias: '[Alarm] Desarmada'
+  trigger:
+    platform: state
+    entity_id: alarm_control_panel.alarma
+    to: 'disarmed'
+  action:
+  - service: notify.telegram
+    data:
+      message: 'La alarma ha sido desactivada.'
+  - service: shell_command.sirena_bip_disarm
+     
+- id: alarm_triggered
+  alias: '[Alarm] Alarma detectada'
+  trigger:
+    platform: state
+    entity_id: alarm_control_panel.alarma
+    to: 'triggered'
+  action:
+  - service: shell_command.sirena
+  - service: notify.telegram
+    data:
+      message: 'ALARMA DETECTADA!!! {{ states[states.alarm_control_panel.alarma.attributes.changed_by.split(".")[0]][ states.alarm_control_panel.alarma.attributes.changed_by.split(".")[1]].name }}'
+  - delay: '00:05:00'
+  - service: shell_command.sirena_bip_disarm

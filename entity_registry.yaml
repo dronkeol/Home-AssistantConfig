@@ -1,0 +1,10 @@
+sensor.iphone_de_cristian_battery_state:
+  config_entry_id:
+  name:
+  platform: ios
+  unique_id: state_iphone_de_cristian
+sensor.iphone_de_cristian_battery_level:
+  config_entry_id:
+  name:
+  platform: ios
+  unique_id: level_iphone_de_cristian

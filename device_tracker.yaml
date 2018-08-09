@@ -1,0 +1,13 @@
+- platform: ping
+  new_device_defaults:
+    track_new_devices: No
+    hide_if_away: False
+  hosts:
+    carmen_telefono: 172.16.1.43
+    cristian_iphone: 172.16.1.42
+
+- platform: owntracks_http
+  region_mapping:
+    casa: home
+    colegio_los_alpes: colegio_los_alpes
+

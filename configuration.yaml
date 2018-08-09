@@ -1,0 +1,59 @@
+homeassistant:
+  name: Home
+  latitude: !secret zone.home.latitud
+  longitude: !secret zone.home.longitud
+  elevation: !secret zone.home.elevacion
+  unit_system: metric
+  time_zone: !secret timezone
+  customize: !include customize.yaml
+
+http:
+  api_password: !secret http_password
+  ip_ban_enabled: true
+  login_attempts_threshold: 2
+
+recorder:
+  purge_interval: 1
+  purge_keep_days: 3
+
+config:
+history:
+logbook:
+map:
+sun:
+ios:
+
+mqtt:
+    broker: mosquitto
+    username: mosquitto
+
+frontend:
+    javascript_version: latest
+
+telegram_bot:
+    - platform: polling
+      api_key: !secret telegram_bot.api_key
+      allowed_chat_ids:
+        - '-271198910'
+
+group: !include groups.yaml
+automation: !include_dir_merge_list automation/
+script: !include scripts.yaml
+switch: !include switches.yaml
+binary_sensor: !include binary_sensors.yaml
+alarm_control_panel: !include mqtt-alarm.yaml
+light: !include lights.yaml
+panel_custom: !include panel_custom.yaml
+notify: !include notification.yaml
+sensor: !include sensors.yaml
+shell_command: !include shell_commands.yaml
+device_tracker: !include device_tracker.yaml
+zone: !include zones.yaml
+#########camera: !include camera.yaml
+
+logger:
+    default: error
+    logs:
+      homeassistant.components.camera: debug
+      #homeassistant.components.sensor.cert_expiry: debug
+      #homeassistant.components.sensor.command_line: debug

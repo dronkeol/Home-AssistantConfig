@@ -1,0 +1,53 @@
+alarm_control_panel.alarma:
+  friendly_name: Alarma
+binary_sensor.pir_comedor:
+  device_class: motion
+  friendly_name: Movimiento Comedor
+binary_sensor.pir_logia:
+  device_class: motion
+  friendly_name: Movimiento Logia
+binary_sensor.pir_escalera:
+  device_class: motion
+  friendly_name: Movimiento Escalera
+sensor.dark_sky_temperature:
+  friendly_name: Temperatura exterior
+sensor.dark_sky_humidity:
+  friendly_name: Humedad ambiental
+switch.alarma:
+  friendly_name: Sirena
+  icon: mdi-alarm-light
+device_tracker.cristian_iphone:
+  friendly_name: Cristian
+device_tracker.carmen_telefono:
+  friendly_name: Carmen
+zone.home:
+  friendly_name: Casa
+  radius: 30
+sensor.processor_use:
+  friendly_name: Uso del procesador
+sensor.disk_use_percent_home:
+  friendly_name: Uso de disco
+sensor.memory_use_percent:
+  friendly_name: Uso de memoria
+sensor.since_last_boot_templated:
+  friendly_name: Ultimo inicio
+sensor.network_in_eth0:
+  friendly_name: Red in eth0
+sensor.network_out_eth0:
+  friendly_name: Red out eth0
+sensor.cpu_temperature:
+  friendly_name: Temperatura CPU
+sensor.lets_encrypt_expiration:
+  friendly_name: Expiracion de certificado
+sensor.load_1m:
+  friendly_name: Carga hace 1m
+sensor.load_5m:
+  friendly_name: Carga hace 5m
+sensor.load_15m:
+  friendly_name: Carga hace 15m
+zone.colegio_los_alpes:
+  latitude: -33.5651
+  longitude: -70.7818
+  radius: 55
+zone.nic_chile:
+  radius: 50
