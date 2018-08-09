@@ -1,0 +1,19 @@
+- alias: Lampara Porche - Ajuste de Brillo
+  trigger:
+    platform: state
+    entity_id: input_number.lampara_porche
+  action:
+    - service: light.turn_on
+      data_template:
+        entity_id: light.lampara_porche
+        brightness: "{{ trigger.to_state.state | int }}"
+
+- alias: Lampara Comedor - Ajuste de Brillo
+  trigger:
+    platform: state
+    entity_id: input_number.lampara_comedor
+  action:
+    - service: light.turn_on
+      data_template:
+        entity_id: light.lampara_comedor
+        brightness: "{{ trigger.to_state.state | int }}"

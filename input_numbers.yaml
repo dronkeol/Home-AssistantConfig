@@ -1,0 +1,15 @@
+lampara_comedor:
+  name: Brillo
+  initial: 254
+  min: 1
+  max: 254
+  step: 1
+  mode: slider
+
+lampara_porche:
+  name: Brightness
+  initial: 254
+  min: 0
+  max: 254
+  step: 1
+  mode: slider
