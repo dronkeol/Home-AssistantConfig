@@ -14,7 +14,7 @@
       - group.comedor
       - group.logia
       - group.sala_estar
-      - group.segundo_piso
+        #- group.segundo_piso
       - group.exterior
       - group.alarma
       - group.estado_del_servidor
@@ -40,9 +40,9 @@
   Comedor:
     control: hidden
     entities:
-      - light.lampara_comedor
+      - light.porche
       - input_number.lampara_comedor
-      - binary_sensor.pir_comedor
+        #      - binary_sensor.pir_comedor
         #      - camera.camara_comedor
 
   Sala Estar:
@@ -98,7 +98,7 @@
     - sensor.load_15m
 
   lampara_comedor:
-    - light.lampara_comedor
+    - light.porche
     - input_number.lampara_comedor
  
   lampara_porche:
@@ -113,6 +113,7 @@
     - device_tracker.carmen_telefono
 
   Movimiento:
+    view: no
     control: hidden
     name: Movimiento
     entities:

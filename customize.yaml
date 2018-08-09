@@ -56,5 +56,5 @@ input_number.lampara_comedor:
 input_number.lampara_porche:
   icon: mdi:brightness-6
 group.movimiento:
-  icon: mdi:motion
+  icon: mdi:human-handsup
 
