@@ -17,13 +17,11 @@ views:
     cards:
       - type: custom:alarm_control_panel-card
         entity: alarm_control_panel.alarma
-        show_keypad: true
         title: Alarma de Casa
         style: '--alarm-color-disarmed: var(--label-badge-blue);'
         states:
         - arm_home
         - arm_away
-          #- disarm
 
     # Specify a tab icon if you want the view tab to be an icon.
   - icon: mdi:home-assistant
