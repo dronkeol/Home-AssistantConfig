@@ -45,12 +45,6 @@ sensor.load_5m:
   friendly_name: Carga hace 5m
 sensor.load_15m:
   friendly_name: Carga hace 15m
-zone.colegio_los_alpes:
-  latitude: -33.5651
-  longitude: -70.7818
-  radius: 55
-zone.nic_chile:
-  radius: 50
 input_number.lampara_comedor:
   icon: mdi:brightness-6
 input_number.lampara_porche:
@@ -66,3 +60,15 @@ script.alarm_arm_home:
 script.alarm_disarm:
   can_cancel: true
   icon: mdi:lock-open
+group.carmen:
+  entity_picture: https://lh3.googleusercontent.com/-14ZRp11dmc0/WqMfY1cJFPI/AAAAAAAAAAA/ymhGvs3JdgkJ31tJYZjbhwz_h8AoQ_FrACOQCEAE/s72-p-k-no/photo.jpg
+group.cristian:
+  entity_picture: https://lh3.googleusercontent.com/-F3UEPn9b2WE/AAAAAAAAAAI/AAAAAAAAJRc/TXB-OKs7C8o/s64-p-k-no/photo.jpg
+device_tracker.carmen_telefono:
+  entity_picture: https://lh3.googleusercontent.com/-14ZRp11dmc0/WqMfY1cJFPI/AAAAAAAAAAA/ymhGvs3JdgkJ31tJYZjbhwz_h8AoQ_FrACOQCEAE/s72-p-k-no/photo.jpg
+device_tracker.cristian_iphone:
+  entity_picture: https://lh3.googleusercontent.com/-F3UEPn9b2WE/AAAAAAAAAAI/AAAAAAAAJRc/TXB-OKs7C8o/s64-p-k-no/photo.jpg 
+device_tracker.carmen_owntracks:
+  entity_picture: https://lh3.googleusercontent.com/-14ZRp11dmc0/WqMfY1cJFPI/AAAAAAAAAAA/ymhGvs3JdgkJ31tJYZjbhwz_h8AoQ_FrACOQCEAE/s72-p-k-no/photo.jpg
+device_tracker.cristian_owntracks:
+  entity_picture: https://lh3.googleusercontent.com/-F3UEPn9b2WE/AAAAAAAAAAI/AAAAAAAAJRc/TXB-OKs7C8o/s64-p-k-no/photo.jpg 

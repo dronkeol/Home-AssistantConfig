@@ -119,5 +119,5 @@
     view: no
     control: hidden
     name: Cristian
-    entities: device_tracker.cristian_iphone, device_tracker.cristian_iphone, device_tracker.iphone_de_cristian
+    entities: device_tracker.cristian_owntracks, device_tracker.cristian_iphone
 
