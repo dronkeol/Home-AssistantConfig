@@ -97,8 +97,8 @@
     view: no
     name: Personas
     entities:
-    - device_tracker.cristian_iphone
-    - device_tracker.carmen_telefono
+    - group.cristian
+    - group.carmen
 
   Movimiento:
     view: no
@@ -108,3 +108,16 @@
     - binary_sensor.pir_comedor
     - binary_sensor.pir_logia
     - binary_sensor.pir_escalera
+ 
+  Carmen:
+    view: no
+    control: hidden
+    name: Carmen
+    entities: device_tracker.carmen_telefono, device_tracker.carmen_owntracks
+
+  Cristian:
+    view: no
+    control: hidden
+    name: Cristian
+    entities: device_tracker.cristian_iphone, device_tracker.cristian_iphone, device_tracker.iphone_de_cristian
+
