@@ -36,3 +36,12 @@
 - platform: cert_expiry
   host: !secret host
   name: Lets Encrypt Expiration
+
+- platform: speedtest
+  minute:
+  - 0
+  - 30
+  monitored_conditions:
+  - ping
+  - download
+  - upload

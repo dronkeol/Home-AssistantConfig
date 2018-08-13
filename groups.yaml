@@ -80,6 +80,7 @@
       - sensor.dark_sky_humidity
 
   Estado del Servidor:
+    - sensor.speedtest
     - sensor.processor_use
     - sensor.disk_use_percent_home
     - sensor.memory_use_percent

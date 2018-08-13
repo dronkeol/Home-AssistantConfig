@@ -9,3 +9,9 @@
   longitude: -70.64578
   radius: 50
   icon: mdi:work
+
+- name: Plaza Oeste
+  latitude: -33.5177
+  longitude: -70.7185
+  radius: 360
+  icon: mdi:store
