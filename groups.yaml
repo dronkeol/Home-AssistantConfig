@@ -41,6 +41,7 @@
     entities:
       - light.lampara_comedor
       - input_number.lampara_comedor
+      - camera.camara_comedor
 
   Sala Estar:
     control: hidden
