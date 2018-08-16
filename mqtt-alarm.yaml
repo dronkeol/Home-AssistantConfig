@@ -1,6 +1,6 @@
 - platform: manual_mqtt
   name: alarma
-  cod: 1810
+  code: 1810
   state_topic: casa/alarma
   command_topic: casa/alarma/comando
   delay_time: 20
