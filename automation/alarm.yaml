@@ -62,11 +62,11 @@
       to: 'on'
   condition:
     - condition: state
-      entity_id: alarm_control_panel.alarm
+      entity_id: alarm_control_panel.alarma
       state: armed_away
   action:
     service: alarm_control_panel.alarm_trigger
-    entity_id: alarm_control_panel.alarm
+    entity_id: alarm_control_panel.alarma
 
 - id: alarm_detect
   alias: '[Alarm] Lanzar alarma si esta activada en MODO PRESENTE'
@@ -82,8 +82,8 @@
       to: 'on'
   condition:
     - condition: state
-      entity_id: alarm_control_panel.alarm
+      entity_id: alarm_control_panel.alarma
       state: armed_home
   action:
     service: alarm_control_panel.alarm_trigger
-    entity_id: alarm_control_panel.alarm
+    entity_id: alarm_control_panel.alarma

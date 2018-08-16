@@ -54,6 +54,8 @@ camera: !include camera.yaml
 logger:
     default: error
     logs:
+      homeassistant.components.automation: debug
+      homeassistant.components.alarm_control_panel: debug
       homeassistant.components.camera: debug
       #homeassistant.components.sensor.cert_expiry: debug
       #homeassistant.components.sensor.command_line: debug
