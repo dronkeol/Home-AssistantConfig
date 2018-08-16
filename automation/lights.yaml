@@ -17,3 +17,18 @@
       data_template:
         entity_id: light.lampara_comedor
         brightness: "{{ trigger.to_state.state | int }}"
+
+- alias: Enciende luces
+  trigger:
+    platform: sun
+    # Possible values: sunset, sunrise
+    event: sunset
+    # Optional time offset. This example is 45 minutes.
+    offset: '-00:45:00'
+  action:
+  - service: light.turn_on
+    data:
+      entities:
+      - light.lampara_comedor
+      - light.lampara_porche
+

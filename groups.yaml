@@ -78,8 +78,6 @@
       - light.porche
       - input_number.lampara_porche
       - sun.sun
-      - sensor.dark_sky_icon
-      - sensor.dark_sky_summary
       - sensor.dark_sky_temperature
       - sensor.dark_sky_daily_low_temperature
       - sensor.dark_sky_daily_high_temperature

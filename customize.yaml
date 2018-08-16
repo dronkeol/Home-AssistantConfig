@@ -10,7 +10,7 @@ binary_sensor.pir_escalera:
   device_class: motion
   friendly_name: Movimiento Escalera
 sensor.dark_sky_temperature:
-  friendly_name: Temperatura exterior
+  friendly_name: Temperatura actual
 sensor.dark_sky_humidity:
   friendly_name: Humedad ambiental
 switch.alarma:
@@ -68,3 +68,8 @@ device_tracker.carmen_owntracks:
   entity_picture: https://lh3.googleusercontent.com/-14ZRp11dmc0/WqMfY1cJFPI/AAAAAAAAAAA/ymhGvs3JdgkJ31tJYZjbhwz_h8AoQ_FrACOQCEAE/s72-p-k-no/photo.jpg
 device_tracker.cristian_owntracks:
   entity_picture: https://lh3.googleusercontent.com/-F3UEPn9b2WE/AAAAAAAAAAI/AAAAAAAAJRc/TXB-OKs7C8o/s64-p-k-no/photo.jpg
+sensor.dark_sky_daily_high_temperature:
+  friendly_name: Temperatura maxima
+sensor.dark_sky_daily_low_temperature:
+  friendly_name: Temperatura minima
+

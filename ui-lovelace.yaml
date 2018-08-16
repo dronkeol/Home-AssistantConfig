@@ -1,15 +1,16 @@
 resources:
 - url: /local/alarm_control_panel-card.js?v=0.3.2
   type: js
-title: My Awesome Home
+- url: /local/monster-card.js?v=0.3.2
+  type: js
 
-# Optional background for all views. Check https://developer.mozilla.org/en-US/docs/Web/CSS/background for more examples.
+title: Mi Casa
+
 background: center / cover no-repeat url("/background.png") fixed
 # Exclude entities from "Unused entities" view
 excluded_entities:
         #- weblink.router
 views:
-    # View tab title.
   - title: Seguridad
     id: seguridad
     background: radial-gradient(crimson, skyblue)
@@ -19,10 +20,23 @@ views:
         entity: alarm_control_panel.alarma
         title: Alarma de Casa
         hide_keypad: false
-        #style: '--alarm-color-disarmed: var(--label-badge-blue);'
         states:
         - arm_home
         - arm_away
+      
+      - type: entities
+        title: Movimiento
+        entities:
+          - binary_sensor.pir_comedor
+          - binary_sensor.pir_logia
+          - binary_sensor.pir_escalera
+     
+      - type: custom:monster-card
+        card:
+          type: glance
+        filter:
+          include:
+          - domain: climate
 
     # Specify a tab icon if you want the view tab to be an icon.
   - icon: mdi:home-assistant
