@@ -10,13 +10,10 @@
     icon: mdi:home
     entities:
       - group.personas
-        #- group.living
       - group.comedor
-        #- group.logia
-        #- group.sala_estar
-        #- group.segundo_piso
       - group.exterior
       - group.alarma
+      - group.clima
       - group.estado_del_servidor
 
 ####################################################
@@ -77,13 +74,24 @@
     entities:
       - light.porche
       - input_number.lampara_porche
+  Clima:
+    control: hidden
+    entities:
       - sun.sun
       - sensor.dark_sky_temperature
       - sensor.dark_sky_daily_low_temperature
       - sensor.dark_sky_daily_high_temperature
       - sensor.dark_sky_humidity
 
-  Estado del Servidor:
+  Servidor:
+    view: yes
+    entities:
+    - group.sensores_servidor
+
+  sensores_servidor:
+    control: hidden
+    name: Sensores
+    entities:
     - sensor.speedtest
     - sensor.processor_use
     - sensor.disk_use_percent_home

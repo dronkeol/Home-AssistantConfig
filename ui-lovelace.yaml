@@ -11,9 +11,38 @@ background: center / cover no-repeat url("/background.png") fixed
 excluded_entities:
         #- weblink.router
 views:
+  - title: Luces
+    id: luces
+    cards:
+    - type: image
+      entity: light.living_room_lights
+      tap_action: toggle
+      image: /local/icons/light_bulb_off.png
+      state_image:
+        'on': /local/icons/light_bulb_on.png
+      state_filter:
+        'on': brightness(130%) saturate(1.5) drop-shadow(0px 0px 10px gold)
+        'off': brightness(80%) saturate(0.8)
+      style:
+        top: 38%
+        left: 50%
+        width: 7%
+        padding: 50px 50px 100px 50px
+
+  - title: Clima
+    id: clima
+    cards:
+        - type: entities
+          title: Weather
+          entities:
+          - sensor.dark_sky_summary
+          - sensor.dark_sky_temperature
+          - sensor.dark_sky_humidity
+          - sensor.dark_sky_precip_probability
+          - sun.sun
+
   - title: Seguridad
     id: seguridad
-    background: radial-gradient(crimson, skyblue)
     theme: dark-mode
     cards:
       - type: custom:alarm_control_panel-card
@@ -30,6 +59,8 @@ views:
           - binary_sensor.pir_comedor
           - binary_sensor.pir_logia
           - binary_sensor.pir_escalera
+      - type: camera-preview
+        entity: camera.camara_comedor
      
       - type: custom:monster-card
         card:
@@ -37,6 +68,14 @@ views:
         filter:
           include:
           - domain: climate
+
+      - type: custom:monster-card
+        show_empty: false
+        card:
+          type: entities
+          filter:
+            include:
+            - domain: configurator
 
     # Specify a tab icon if you want the view tab to be an icon.
   - icon: mdi:home-assistant
