@@ -50,6 +50,7 @@ device_tracker: !include device_tracker.yaml
 zone: !include zones.yaml
 input_number: !include input_numbers.yaml
 camera: !include camera.yaml
+variable: !include variables.yaml
 
 logger:
     default: error

@@ -10,3 +10,33 @@ alarm_disarm:
   alias: Desactivar
   sequence:
     - service: alarm_control_panel.alarm_disarm
+
+update_last_motion:
+  sequence:
+  - service: variable.set_variable
+    data:
+      variable: last_motion
+      attributes_template: >
+        {
+          "history_1": "{{ variable.state }}",
+          "history_2": "{{ variable.attributes.history_1 }}",
+          "history_3": "{{ variable.attributes.history_2 }}"
+        }
+      data_template:
+        value: "{{ location }}"
+
+update_motion_living:
+  sequence:
+  - service: script.update_last_motion
+    data:
+      location: 'Living'
+update_motion_logia:
+  sequence:
+  - service: script.update_last_motion
+    data:
+      location: 'Logia'
+update_motion_escalera:
+  sequence:
+  - service: script.update_last_motion
+    data:
+      location: 'Escalera'
