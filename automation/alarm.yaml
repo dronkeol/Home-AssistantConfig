@@ -8,7 +8,7 @@
   - service: notify.ios_iphone_de_cristian
     data:
       message: 'La alarma ha sido activada en modo Ausente, adiós'
-  - service: shell_command.sirena_bip_arm
+      #  - service: shell_command.sirena_bip_arm
 
 - id: alarm_armed_home
   alias: '[Alarm] Modo Presente'
@@ -20,7 +20,7 @@
   - service: notify.ios_iphone_de_cristian
     data:
       message: 'La alarma ha sido activada en modo Presente, adiós'
-  - service: shell_command.sirena_bip_arm
+      #  - service: shell_command.sirena_bip_arm
 
 - id: alarm_disarmed
   alias: '[Alarm] Desarmada'
@@ -32,7 +32,7 @@
   - service: notify.ios_iphone_de_cristian
     data:
       message: 'La alarma ha sido desactivada.'
-  - service: shell_command.sirena_bip_disarm
+      #  - service: shell_command.sirena_bip_disarm
      
 - id: alarm_triggered
   alias: '[Alarm] Alarma detectada'
@@ -41,12 +41,12 @@
     entity_id: alarm_control_panel.alarma
     to: 'triggered'
   action:
-  - service: shell_command.sirena
+          #  - service: shell_command.sirena
   - service: notify.ios_iphone_de_cristian
     data:
       message: 'ALARMA DETECTADA!!! {{ states[states.alarm_control_panel.alarma.attributes.changed_by.split(".")[0]][ states.alarm_control_panel.alarma.attributes.changed_by.split(".")[1]].name }}'
   - delay: '00:05:00'
-  - service: shell_command.sirena_bip_disarm
+    #  - service: shell_command.sirena_bip_disarm
 
 - id: alarm_detect
   alias: '[Alarm] Lanzar alarma si esta activada en MODO AUSENTE'
