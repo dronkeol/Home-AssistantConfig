@@ -22,6 +22,7 @@ logbook:
 map:
 sun:
 ios:
+wake_on_lan:
 
 mqtt:
     broker: !secret mosquitto.broker
@@ -52,6 +53,7 @@ input_number: !include input_numbers.yaml
 #camera: !include camera.yaml
 variable: !include variables.yaml
 homekit: !include homekit.yaml
+media_player: !include media_player.yaml
 
 logger:
     default: error

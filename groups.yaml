@@ -38,6 +38,7 @@
     entities:
       - light.lampara_comedor
       - input_number.lampara_comedor
+      - media_player.tv_living
       - camera.camara_comedor
 
   Sala Estar:
