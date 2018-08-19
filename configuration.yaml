@@ -24,8 +24,8 @@ sun:
 ios:
 
 mqtt:
-    broker: 172.16.1.19
-    username: mosquitto
+    broker: !secret mosquitto.broker
+    username: !secret mosquitto.username
 
 frontend:
     javascript_version: latest
@@ -34,7 +34,7 @@ telegram_bot:
     - platform: polling
       api_key: !secret telegram_bot.api_key
       allowed_chat_ids:
-        - '-271198910'
+        - !secret telegram_bot.allowed_chat_ids
 
 group: !include groups.yaml
 automation: !include_dir_merge_list automation/
