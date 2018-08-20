@@ -1,6 +1,0 @@
-- platform: rpi_rf
-  gpio: 17
-  switches:
-    pir_comedor2:
-      code_on: 12971530
-      code_off: 99999999
