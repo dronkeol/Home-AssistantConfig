@@ -10,3 +10,14 @@
       data_template:
         title: "{{ states.persistent_notification.httplogin.attributes.message }}"
         message: 'url: https://whatismyipaddress.com/ip/{{ states.persistent_notification.httplogin.attributes.message.split ("from ") [1]}}'
+
+- alias: 'Turn off PIRs'
+  trigger:
+  - platform: state
+    entity_id: switch.pir_comedor2
+    from: 'off'
+    to: 'on'
+  action:
+  - delay: '00:00:10'
+  - service: switch.turn_off
+    entity_id: switch.pir_comedor2

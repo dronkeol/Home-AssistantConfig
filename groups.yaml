@@ -36,6 +36,7 @@
   Comedor:
     control: hidden
     entities:
+      - switch.pir_comedor2
       - light.lampara_comedor
       - input_number.lampara_comedor
       - media_player.tv_living
