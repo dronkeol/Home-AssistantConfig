@@ -52,13 +52,10 @@ input_number.lampara_porche:
 group.movimiento:
   icon: mdi:human-handsup
 script.alarm_arm_away:
-  can_cancel: true
   icon: mdi:lock
 script.alarm_arm_home:
-  can_cancel: true
   icon: mdi:home-lock
 script.alarm_disarm:
-  can_cancel: true
   icon: mdi:lock-open
 group.carmen:
   entity_picture: https://lh3.googleusercontent.com/-14ZRp11dmc0/WqMfY1cJFPI/AAAAAAAAAAA/ymhGvs3JdgkJ31tJYZjbhwz_h8AoQ_FrACOQCEAE/s72-p-k-no/photo.jpg

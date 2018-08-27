@@ -25,9 +25,9 @@
       - group.personas
       - group.movimiento
       - alarm_control_panel.alarma
-      - script.alarm_arm_away
-      - script.alarm_arm_home
-      - script.alarm_disarm
+        #- script.alarm_arm_away
+        #- script.alarm_arm_home
+      #- script.alarm_disarm
 
   Living:
     control: hidden
