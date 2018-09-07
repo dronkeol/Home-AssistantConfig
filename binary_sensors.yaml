@@ -22,6 +22,16 @@
   value_template: "{{ value_json.state }}"
   device_class: "connectivity"
   json_attributes: 
-    - "description"
-    - "type"
-    - "rssi"
+    - "linkquality"
+
+- platform: "mqtt"
+  name: "Contacto Entrada"
+  state_topic: "zigbee2mqtt/contacto_entrada"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  payload_on: false
+  payload_off: true
+  value_template: "{{ value_json.contact }}"
+  device_class: "door"
+  json_attributes: 
+  - "battery"
+  - "voltage"

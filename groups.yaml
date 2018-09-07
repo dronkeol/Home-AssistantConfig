@@ -23,6 +23,7 @@
     - sensor.sensor_humedad
     - sensor.sensor_presion
     - binary_sensor.zigbee_router
+    - binary_sensor.contacto_entrada
 
 ####################################################
 #                     ROOMS                        #
