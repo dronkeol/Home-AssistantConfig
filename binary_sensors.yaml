@@ -12,3 +12,16 @@
   name: "Pir Escalera"
   state_topic: "casa/escalera/pir"
   device_class: motion
+
+- platform: "mqtt"
+  name: "Zigbee Router"
+  state_topic: "zigbee2mqtt/router"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  payload_on: true
+  payload_off: false
+  value_template: "{{ value_json.state }}"
+  device_class: "connectivity"
+  json_attributes: 
+    - "description"
+    - "type"
+    - "rssi"

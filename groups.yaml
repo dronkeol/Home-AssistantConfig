@@ -15,6 +15,14 @@
       - group.alarma
       - group.clima
       - group.estado_del_servidor
+      - group.sensores
+      
+  Sensores:
+    entities:
+    - sensor.sensor_temperatura
+    - sensor.sensor_humedad
+    - sensor.sensor_presion
+    - binary_sensor.zigbee_router
 
 ####################################################
 #                     ROOMS                        #

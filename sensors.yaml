@@ -45,3 +45,40 @@
   - ping
   - download
   - upload
+
+- platform: mqtt
+  name: Sensor Temperatura
+  state_topic: "zigbee2mqtt/sensor_temperatura"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  unit_of_measurement: "°C"
+  icon: "mdi:temperature-celsius"
+  value_template: "{{ value_json.temperature }}"
+  json_attributes:
+  - "linkquality"
+  - "battery"
+  - "voltage"
+
+- platform: mqtt
+  name: Sensor Humedad
+  state_topic: "zigbee2mqtt/sensor_temperatura"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  unit_of_measurement: "%"
+  icon: "mdi:water-percent"
+  value_template: "{{ value_json.humidity }}"
+  json_attributes:
+  - "linkquality"
+  - "battery"
+  - "voltage"
+
+- platform: mqtt
+  name: Sensor Presion
+  state_topic: "zigbee2mqtt/sensor_temperatura"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  unit_of_measurement: "°C"
+  icon: "mdi:blur-radial"
+  value_template: "{{ value_json.pressure }}"
+  json_attributes:
+  - "linkquality"
+  - "battery"
+  - "voltage"
+
